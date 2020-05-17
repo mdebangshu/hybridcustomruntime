@@ -64,6 +64,7 @@
 			<groupId>com.amazonaws</groupId>
 			<artifactId>aws-java-sdk-dynamodb</artifactId>
 			<version>1.11.64</version>
+			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>com.github.derjust</groupId>
@@ -83,6 +84,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+			<optional>true</optional>
 		</dependency>
 	</dependencies>
 	<dependencyManagement>
@@ -104,6 +106,13 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
 					<!-- <source>11</source> <target>11</target> -->
+					<annotationProcessorPaths>
+						<path>
+							<groupId>org.springframework</groupId>
+							<artifactId>spring-context-indexer</artifactId>
+							<version>5.2.6.RELEASE</version>
+						</path>
+					</annotationProcessorPaths>
 				</configuration>
 			</plugin>
 			<plugin>
